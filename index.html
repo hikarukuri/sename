@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="学校祭で使える背ネームジェネレーターでおもしろい名前をランダムに作成しましょう。独自の組み合わせで面白い結果を楽しめます。">
+    <title>背ネームジェネレーター｜学校祭で使えるおもしろい背ネームをランダムに生成</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>背ネームジェネレーター</h1>
+        <button onclick="getRandomElement()">生み出す</button>
+        <div class="result">
+            <p>あなたの背ネームは...</p>
+            <h2 id="result"></h2>
+        </div>
+    </div>
+    <a href="form.html">単語の提案フォームへ</a>
+
+    <script>
+        // 配列の要素
+        let elements1 = ["実は", "世界の", "あぁ", "我らの", "新人", "一生", "豆腐の", "恐怖の", "世界の", "ぼっち", "理想の", "I LOVE", "1組の", "家の中の", "2組の", "3組の", "4組の", "未来の", "どちらかというと"];
+        let elements2 = ["先生", "玉ねぎ", "大谷翔平", "レイトン教授", "俺", "パリピ", "かっぱ", "メンタル", "星", "開成生", "女神", "ちょんまげ", "変人", "二次関数", "バナナ", "総理大臣", "ひゃっほー", "実験室", "派", "学習者像"];
+
+        function getRandomElement() {
+            // ランダムなインデックスを生成
+            let randomIndex1 = Math.floor(Math.random() * elements1.length);
+            let randomIndex2 = Math.floor(Math.random() * elements2.length);
+
+            // 配列から要素を取得
+            let randomElement1 = elements1[randomIndex1];
+            let randomElement2 = elements2[randomIndex2];
+
+            let ans = "「" + randomElement1 + randomElement2 + "」";
+
+            // 結果を表示する要素を取得
+            document.getElementById("result").textContent = ans;
+        }
+    </script>
+</body>
+
+</html>
